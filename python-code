@@ -1,0 +1,70 @@
+I. NOIR Data Types from seattle.csv – 2 of each
+seattle = pd.read_csv(r"C:\Users\nashi\sample-python-code\seattle-dataset.csv")
+seattle
+
+1. Ordinal Data -Summery Statistics, Data Visualization with appropriate titles and labels
+
+import pandas as pd
+import matplotlib.pyplot as plt
+plt.style.use('seaborn')
+seattle = pd.read_csv(r"C:\Users\nashi\sample-python-code\seattle-dataset.csv")
+condition = seattle['condition-Ordinal']
+grade =seattle['grade-Ordinal']
+plt.scatter(condition,grade, s=100, c='green',cmap = 'summer', edgecolor='red',linewidth=1,
+alpha=0.75)
+plt.title('Summary Statistics-Ordinal')
+plt.xlabel('Condition')
+plt.ylabel('Grade')
+plt.show()
+
+Comments – In this Scatter plot, Y-axis (Grade) seems to increase as X-axis (Condition) decreases, it
+indicates a negative linear relationship
+
+2. Interval Data Type -Summery Statistics, Data Visualization with appropriate titles and labels
+import pandas as pd
+import matplotlib.pyplot as plt
+plt.style.use('seaborn')
+seattle = pd.read_csv(r"C:\Users\nashi\sample-python-code\seattle-dataset.csv")
+sqft_living = seattle['sqft_living-Interval']
+sqft_lot =seattle['sqft_lot-Interval']
+plt.scatter(sqft_living,sqft_lot, s=100, c='green',cmap = 'summer', edgecolor='red',linewidth=1,
+alpha=0.75)
+plt.title('Summary Statistics-Interval')
+plt.xlabel('sqft_living')
+plt.ylabel('sqft_lot')
+plt.show()
+
+Comments- In this Scatter plot, Y- axis ('sqft_lot') increases, X-axis ('sqft_living') decreases, which
+indicates a negative linear relationship.
+
+3. Nominal Data Type -Summery Statistics, Data Visualization with appropriate titles and labels
+import pandas as pd
+import matplotlib.pyplot as plt
+plt.style.use('seaborn')
+seattle = pd.read_csv(r"C:\Users\nashi\sample-python-code\seattle-dataset.csv")
+zipcode = seattle['zipcode-Nominal']
+view =seattle['view-Nominal']
+plt.scatter(zipcode,view, s=100, c='green',cmap = 'summer', edgecolor='red',linewidth=1,
+alpha=0.75)
+plt.title('Summary Statistics -Nominal')
+plt.xlabel('zipcode')
+plt.ylabel('view')
+plt.show()
+
+Comments- In this Scatter plot, Y- axis ('view') increases, X-axis ('zip code') decreases, which indicates a
+negative linear relationship.
+
+4. Ratio Data Type -Summery Statistics, Data Visualization with appropriate titles and labels
+plt.style.use('seaborn')
+seattle = pd.read_csv(r"C:\Users\nashi\sample-python-code\seattle-dataset.csv")
+sqft_above = seattle['sqft_above-Ratio']
+sqft_basement =seattle['sqft_basement-Ratio']
+plt.scatter(sqft_above,sqft_basement, s=100, c='green',cmap = 'summer',
+edgecolor='red',linewidth=1, alpha=0.75)
+plt.title('Summary Statistics -Ratio')
+plt.xlabel('sqft_above')
+plt.ylabel('sqft_basement')
+plt.show()
+
+Comments- In this Scatter plot, Y- axis ('sqft_basement') decreases, X-axis ('sqft_above') increases,
+which indicates a negative linear relationship.
